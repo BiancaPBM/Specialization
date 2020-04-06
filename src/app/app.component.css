@@ -15,3 +15,8 @@ mat-select{
 
   width: 150px;
 }
+button
+{
+  font-size: x-large;
+  justify-content: space-between;
+}
