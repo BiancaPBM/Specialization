@@ -1,0 +1,17 @@
+.navbar {
+  justify-content: space-between;
+  color: white;
+  background-color: #3f51b5;
+
+}
+span {
+  padding-right: 1rem;
+
+}
+.span2 {
+  padding-left: 3rem;
+}
+mat-select{
+
+  width: 150px;
+}
