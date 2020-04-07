@@ -5,8 +5,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
-const material =[MatButtonModule , MatToolbarModule , MatIconModule , MatInputModule , MatSelectModule ];
+
+const material =[MatButtonModule , MatToolbarModule , MatIconModule , MatInputModule , MatSelectModule, MatPaginatorModule ];
 
 @NgModule({
   imports: [material],

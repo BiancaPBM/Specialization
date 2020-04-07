@@ -20,3 +20,9 @@ button
   font-size: x-large;
   justify-content: space-between;
 }
+mat-paginator
+{
+  background-color: #3f51b5;
+
+  margin-top: 750px;
+}
