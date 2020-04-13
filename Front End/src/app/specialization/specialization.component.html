@@ -1,0 +1,103 @@
+<div style="height: 80vh;">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>!FIIBolnav</span>
+            <span class="menu-spacer"></span>
+            <div fxShow="true" fxHide.lt-md>
+                <a href="#acasa" mat-button>Acasa</a>
+                <a href="#specializari" mat-button>Specializari</a>
+                <a href="#doctori" mat-button>Doctori</a>
+                <a class="nav-item nav-link" routerLink="/doctors">Doctors</a>
+
+            </div>
+
+        </mat-toolbar-row>
+
+
+    </mat-toolbar>
+
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav>
+            <mat-nav-list>
+                <a (click)="sidenav.toggle()" href="" mat-list-item>Inchide</a>
+                <a href="#acasa" mat-list-item>Acasa</a>
+                <a href="#specializari" mat-list-item>Specializari</a>
+                <a href="#doctori" mat-list-item>Doctori</a>
+
+
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+
+            <div class = "target">
+
+                <div id = "acasa">
+                    <mat-card-title>Acasa</mat-card-title>
+                </div>
+
+                <div id="specializari">
+
+                    <mat-card>
+                        <mat-card-title>
+                            <a href="#">Alergologie și imunologie</a>
+                        </mat-card-title>
+                        <mat-card-content>
+                            Alergologie și imunologie clinică reprezintă specialitatea care se ocupă cu studiul bolilor alergice,
+                            a bolilor și sindroamelor disimunitare, care includ tulburări de imunoreglare și imunodeficiențe.
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card>
+                        <mat-card-title>
+                            <a href="#">Anatomia patologică</a>
+                        </mat-card-title>
+                        <mat-card-content>
+                            Anatomia patologică este o ramură a patologiei care se ocupă cu diagnosticul bolilor
+                            pe baza studierii schimbărilor macroscopice si microscopice a celulelor si a țesuturilor,
+                            suferite de pe urma unei stări patologice .Părintele fondator al anatomiei patologice moderne
+                            este italianul Giovani Battista Morgagni. O ramură care se ocupă la un nivel sub microscopic
+                            și care întregește datele obținute prin metodele anatomiei patologice este biologia moleculară.
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card>
+                        <mat-card-title>
+                            <a href="#">Anestezia şi terapia intensivă</a>
+                        </mat-card-title>
+
+                        <mat-card-content>
+                            Anestezia şi terapia intensivă este specialitatea medicală care asigură, prin
+                            mijloace farmacologice şi tehnice specifice, pe de o parte condiţiile necesare pentru
+                            desfăşurarea actului chirurgical, a îngrijirii perioperatorii şi a altor proceduri
+                            diagnostice/terapeutice iar, pe de altă parte, suportul indispensabil pacientului critic pentru
+                            evaluarea şi tratamentul disfuncţiilor/leziunilor de organ.
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card>
+                        <mat-card-title>
+                            <a href="#">Boli infecţioase</a>
+                        </mat-card-title>
+                        <mat-card-content>
+                            Specialitatea Boli infecţioase este o specialitate medicală care se ocupă cu
+                            studiul bolilor provocate de agenţi infecţioşi transmisibili şi netransmisibili,
+                            precum şi cu prevenirea, depistarea, diagnosticarea şi tratarea bolilor provocate de
+                            prioni, virusuri, bacterii, fungi, paraziti şi alţi agenţi patogeni.
+                        </mat-card-content>
+                    </mat-card>
+
+                </div>
+
+                <div id = "doctori">
+                    <p>aici sunt doctorii</p>
+                </div>
+
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+</div>
+

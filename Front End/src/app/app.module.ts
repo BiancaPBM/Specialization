@@ -11,11 +11,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { AppComponent } from './app.component';
+import { DoctorsComponent } from './doctors';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {RouterModule} from '@angular/router';
+import { AppRoutingModule} from './app-routing.module';
+import { SpecializationComponent } from './specialization';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DoctorsComponent,
+    SpecializationComponent
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,10 @@ import { AppComponent } from './app.component';
     FlexLayoutModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
