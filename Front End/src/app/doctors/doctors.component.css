@@ -1,0 +1,34 @@
+.navbar {
+    justify-content: space-between;
+    color: white;
+    background-color: #3f51b5;
+    height: 80px;
+
+}
+span {
+    padding-right: 1rem;
+
+}
+.span2 {
+    padding-left: 3rem;
+}
+.span3 {
+    padding-top: 1rem;
+}
+mat-select{
+
+    width: 150px;
+
+}
+button
+{
+    font-size: x-large;
+    justify-content: space-between;
+}
+mat-paginator
+{
+    background-color: #3f51b5;
+
+    margin-top: 800px;
+}
+
