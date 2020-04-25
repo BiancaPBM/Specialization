@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8090")
+@CrossOrigin
 @RequestMapping("/specialities")
 //@EnableMongoRepositories(basePackages ="com.api.Specialization.repository.speciality")
 public class SpecialityController {
@@ -32,6 +32,15 @@ public class SpecialityController {
         return specialityService.findByNameContaining(name);
     }
 
+    @GetMapping(value = "/name")
+    public List<Speciality> getByNameSpec(@RequestParam(value = "name")String name){
+        return specialityService.findByNameContaining(name);
+    }
+
+    @GetMapping("/cheie")
+    public List<Speciality> getByCuvinteCheie(@RequestParam("keyword")String word){
+        return specialityService.findByKeyword(word);
+    }
     @PostMapping
     public void insert(@RequestBody Speciality speciality) {
         this.specialityService.insert(speciality);

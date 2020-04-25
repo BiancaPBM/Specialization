@@ -5,6 +5,7 @@ import com.api.Specialization.repository.speciality.SpecialityRepository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -20,7 +21,11 @@ public class SpecialityService implements ISpecialityService {
     }
 
     public List<Speciality> findByNameContaining(String name) {
-        return specialityRepository.findByNameContaining(name);
+        return specialityRepository.findByNameContainingIgnoreCase(name);
+    }
+
+    public List<Speciality> findByKeyword(String word) {
+        return specialityRepository.findByDescriptionContainingIgnoreCase(word);
     }
 
     public void insert(Speciality speciality) {
