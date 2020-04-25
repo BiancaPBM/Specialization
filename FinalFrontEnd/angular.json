@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "Specializari"
+  "defaultProject": "Specializari",
+  "cli": {
+    "analytics": "5284a60f-0c89-4ae7-854e-123b651098a1"
+  }
 }
