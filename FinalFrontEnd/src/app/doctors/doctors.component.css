@@ -2,29 +2,27 @@
     justify-content: space-between;
     color: white;
     background-color: #3f51b5;
-
 }
+
 span {
     padding-right: 1rem;
-
 }
+
 .span2 {
     padding-left: 3rem;
 }
 
-mat-select{
-
+mat-select {
     width: 150px;
 }
-button
-{
+
+button {
     font-size: x-large;
     justify-content: space-between;
 }
-mat-paginator
-{
-    background-color: #3f51b5;
 
+mat-paginator {
+    background-color: #3f51b5;
     margin-top: 750px;
 }
 
@@ -35,17 +33,12 @@ mat-paginator
     width: 100%;
     background-color: #3f51b5;
     height: 5rem;
-
 }
 
 mat-card {
-    padding:2vw;
+    padding: 2vw;
     margin: 0.1vw;
     border-radius: 20px;
     background-color: #3f51b5;
-    color:white;
-}
-
-.span3 {
-
+    color: white;
 }
