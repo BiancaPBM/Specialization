@@ -9,8 +9,9 @@ import java.util.List;
 
 //DOAR INCEPUT...va fi implementat ulterior
 @Repository
-public interface SpecialityRepository extends MongoRepository<Speciality, String> {
+public interface SpecialityRepository extends MongoRepository<Speciality, String>{
     List<Speciality> findAll(Sort sortOrder);
+    List<Speciality> findByNameContainingIgnoreCase(String name);
+    List<Speciality> findByDescriptionContainingIgnoreCase(String word);
 
-    List<Speciality> findByNameContaining(String name);
 }

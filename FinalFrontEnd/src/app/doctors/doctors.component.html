@@ -1,25 +1,25 @@
-    <div>
-        <mat-toolbar color=#3f51b5  class = 'navbar span2' >
+<div>
+    <mat-toolbar color=#3f51b5 class='navbar span2'>
 
         <div>
             <span></span>
 
             <mat-form-field>
                 <mat-label> Specializare </mat-label>
-                <mat-select>
-                    <mat-option value="1">
+                <mat-select [(ngModel)]="specialitate" (ngModelChange)="filterDoctors()">
+                    <mat-option value="Alergologie si imunologie">
                         Alergologie si imunologie
                     </mat-option>
-                    <mat-option value="2">
+                    <mat-option value="Anatomie patologica">
                         Anatomie patologica
                     </mat-option>
-                    <mat-option value="3">
+                    <mat-option value="Anestezie si terapie intensiva">
                         Anestezie si terapie intensiva
                     </mat-option>
-                    <mat-option value="4">
+                    <mat-option value="Boli infectioase">
                         Boli infectioase
                     </mat-option>
-                    <mat-option value="5">
+                    <mat-option value="Cardiologie">
                         Cardiologie
                     </mat-option>
                     <mat-option>
@@ -156,7 +156,7 @@
             <mat-form-field>
 
                 <mat-label> Locatie </mat-label>
-                <mat-select matNativeControl>
+                <mat-select matNativeControl [(ngModel)]="locatie" (ngModelChange)="filterDoctors()">
                     <mat-option value="﻿Alba">﻿Alba</mat-option>
                     <mat-option value="Arad">Arad</mat-option>
                     <mat-option value="Argeș">Argeș</mat-option>
@@ -205,15 +205,15 @@
 
             <span></span>
 
-            <mat-form-field>
+            <mat-form-field ng-submit="filterDoctors()">
                 <mat-label>Nume medic</mat-label>
-                <input matInput>
+                <input matInput [(ngModel)]="name" (keyup.enter)="filterDoctors()">
             </mat-form-field>
             <span></span>
             <mat-form-field>
 
                 <mat-label> Sorteaza </mat-label>
-                <mat-select matNativeControl>
+                <mat-select matNativeControl [(ngModel)]="sortare" (ngModelChange)="filterDoctors()">
                     <mat-option value="Nume ( A - Z )">Nume ( A - Z )</mat-option>
                     <mat-option value="Nume ( Z - A )">Nume ( Z - A )</mat-option>
                     <mat-option value="Rating crescator">Rating crescator</mat-option>
@@ -224,49 +224,27 @@
 
 
         </div>
-        </mat-toolbar>
+    </mat-toolbar>
 
-    </div>
+</div>
 
 <div>
-    <mat-card>
+    <mat-card class="list-doctors" *ngFor="let doctor of doctors; let i = index" [class.active]="i == currentIndex" (click)="setActiveDoctor(doctor, i)">
         <mat-card-title>
-            DOCTOR 1
+            {{ doctor.lastName }} {{ doctor.firstName }} , rating: {{ doctor.rating }}
         </mat-card-title>
         <mat-card-content>
-            <p>
-                AICI BAGAM INFORMATII DOCTOR 1 .
+            <p *ngFor="let speciality of doctor.speciality">
+                {{ speciality }}
+            </p>
+            <p *ngFor="let workplace of doctor.workplace">
+                {{workplace.hospitalName}} {{workplace.city}}
             </p>
         </mat-card-content>
     </mat-card>
 
-    <mat-card>
-        <mat-card-title>
-            DOCTOR 2
-        </mat-card-title>
-        <mat-card-content>
-            <p>
-                AICI BAGAM INFORMATII DOCTOR 2 .
-            </p>
-        </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-        <mat-card-title>
-            DOCTOR 3
-        </mat-card-title>
-
-        <mat-card-content>
-            <p>
-                AICI BAGAM INFORMATII DOCTOR 3.
-            </p>
-        </mat-card-content>
-    </mat-card>
 </div>
 <div class="">
-    <mat-paginator [length]="100"
-                   [pageSize]="10"
-                   [pageSizeOptions]="[10, 25, 50, 100]">
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]">
     </mat-paginator>
 </div>
-
