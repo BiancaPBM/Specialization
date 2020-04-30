@@ -1,9 +1,9 @@
 package com.api.Specialization.service;
 
-import com.api.Specialization.models.Speciality;
-import org.springframework.data.domain.Sort;
+        import com.api.Specialization.models.Speciality;
+        import org.springframework.data.domain.Sort;
 
-import java.util.List;
+        import java.util.List;
 
 public interface ISpecialityService {
     List<Speciality> findAll(Sort sortOrder);

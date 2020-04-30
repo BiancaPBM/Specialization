@@ -1,4 +1,5 @@
 package com.api.Specialization.models;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -26,8 +27,6 @@ public class Doctor {
     private List<Workplace> workplace;
     @Field("disponibility")
     private List<String> disponibility;
-
-
     public Doctor(String _id, int age, String firstName, String lastName, List<String> speciality, double rating, Contact contact, List<Workplace> workplace, List<String> disponibility) {
         this._id = _id;
         this.age = age;
@@ -111,5 +110,4 @@ public class Doctor {
     public void setRating(double rating) {
         this.rating = rating;
     }
-
 }

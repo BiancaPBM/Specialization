@@ -42,27 +42,27 @@ public class DoctorController {
     public void delete(@PathVariable("_id") String _id){
         this.doctorService.deleteById(_id);
     }
-    /*
-       @GetMapping("/firstname/{firstname}")
-       public List<Doctor> getByFirstName(@PathVariable("firstname") String firstName) {
-           return this.doctorRepository.findByFirstNameIgnoreCase(firstName);
-       }
+ /*
+    @GetMapping("/firstname/{firstname}")
+    public List<Doctor> getByFirstName(@PathVariable("firstname") String firstName) {
+        return this.doctorRepository.findByFirstNameIgnoreCase(firstName);
+    }
 
-       @GetMapping("/lastname/{lastname}")
-       public List<Doctor> getByLastName(@PathVariable("lastname") String lastName) {
-           return this.doctorRepository.findByLastNameIgnoreCase(lastName);
-       }
+    @GetMapping("/lastname/{lastname}")
+    public List<Doctor> getByLastName(@PathVariable("lastname") String lastName) {
+        return this.doctorRepository.findByLastNameIgnoreCase(lastName);
+    }
 
-       @GetMapping("/city/{city}")
-       public List<Doctor> getByCity(@PathVariable("city") String city) {
-           return this.doctorRepository.findByCity(city);
-       }
+    @GetMapping("/city/{city}")
+    public List<Doctor> getByCity(@PathVariable("city") String city) {
+        return this.doctorRepository.findByCity(city);
+    }
 
-       @GetMapping("/speciality/{speciality}")
-       public List<Doctor> getBySpeciality(@PathVariable("speciality") String speciality) {
-           return this.doctorRepository.findBySpeciality(speciality);
-       }
-   */
+    @GetMapping("/speciality/{speciality}")
+    public List<Doctor> getBySpeciality(@PathVariable("speciality") String speciality) {
+        return this.doctorRepository.findBySpeciality(speciality);
+    }
+*/
     @GetMapping(value = "/filter")
     public List<Doctor> getByFilters(@RequestParam(value = "workplace.city", required = false) String city,
                                      @RequestParam(value = "speciality", required = false) String speciality,
