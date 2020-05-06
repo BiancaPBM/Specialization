@@ -1,7 +1,4 @@
 package com.api.Specialization.controllers;
-
-//DOAR INCEPUT...va fi implementat ulterior
-
 import com.api.Specialization.models.Speciality;
 import com.api.Specialization.service.SpecialityService;
 import org.springframework.data.domain.Sort;
