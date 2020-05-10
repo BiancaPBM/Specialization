@@ -1,5 +1,6 @@
 package com.api.Specialization.controllers;
 
+import com.api.Specialization.controllers.MailController;
 import com.api.Specialization.models.Doctor;
 import com.api.Specialization.models.FilterEntry;
 import com.api.Specialization.models.FilterResolver;
@@ -18,9 +19,11 @@ import java.util.List;
 @RequestMapping("/doctors")
 public class DoctorController {
     private IDoctorService doctorService;
+    private MailController mailController;
 
-    public DoctorController(IDoctorService doctorService) {
+    public DoctorController(IDoctorService doctorService, MailController mailController) {
         this.doctorService = doctorService;
+        this.mailController = mailController;
     }
 
     @GetMapping
@@ -30,7 +33,9 @@ public class DoctorController {
     }
     @PostMapping
     public void insert(@RequestBody Doctor doctor) {
+        System.out.println("CE SE INTAMPLA DOCTORE?");
         this.doctorService.insert(doctor);
+        mailController.sendMailNotification(doctor);
     }
 
     @PutMapping

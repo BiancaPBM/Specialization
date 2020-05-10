@@ -7,6 +7,9 @@ public class Workplace {
     private String street;
     private int streetNo;
 
+    public Workplace() {
+
+    }
     public Workplace(String hospitalName, String country, String city, String street, int streetNo) {
         this.hospitalName = hospitalName;
         this.country = country;
