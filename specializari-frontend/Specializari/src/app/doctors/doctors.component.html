@@ -229,17 +229,26 @@
 </div>
 
 <div>
-    <mat-card class="list-doctors" *ngFor="let doctor of doctors; let i = index" [class.active]="i == currentIndex" (click)="setActiveDoctor(doctor, i)">
+    <mat-card [routerLink]="'/doctors/'+doctor._id" class="list-doctors" *ngFor="let doctor of doctors; let i = index" [class.active]="i == currentIndex"  (click)="setActiveDoctor(doctor, i)">
         <mat-card-title>
-            {{ doctor.lastName }} {{ doctor.firstName }} , rating: {{ doctor.rating }}
+            Dr. {{ doctor.lastName }} {{ doctor.firstName }}
         </mat-card-title>
+        <mat-card-title-group>rating: {{ doctor.rating }}</mat-card-title-group>
         <mat-card-content>
-            <p *ngFor="let speciality of doctor.speciality">
-                {{ speciality }}
-            </p>
-            <p *ngFor="let workplace of doctor.workplace">
-                {{workplace.hospitalName}} {{workplace.city}}
-            </p>
+            Specialitati:
+            <a *ngFor="let speciality of doctor.speciality let isLast = last">
+                {{ speciality }} {{isLast ? '' : ', '}}
+            </a>
+            <div></div>
+            Locul de munca:
+            <a *ngFor="let workplace of doctor.workplace let isLast=last">
+                {{workplace.hospitalName}} - {{workplace.city}} {{isLast ? '' : ', '}}
+            </a>
+            <div></div>
+            Contact:
+            <a >
+                {{doctor.contact.phone}} sau {{doctor.contact.email}}
+            </a>
         </mat-card-content>
     </mat-card>
 

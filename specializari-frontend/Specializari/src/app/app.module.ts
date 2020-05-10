@@ -18,11 +18,13 @@ import {routesConstants} from './app-routing.module';
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SpecificDoctorComponent } from './specific-doctor/specific-doctor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routesConstants
+    routesConstants,
+    SpecificDoctorComponent
 
   ],
   imports: [

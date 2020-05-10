@@ -17,7 +17,6 @@
   <component name="ProjectId" id="1aRi6duIpt0nPcj2sUsqYzcsUuU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -70,17 +69,38 @@
       <workItem from="1586787099348" duration="2505000" />
       <workItem from="1586815977960" duration="1737000" />
       <workItem from="1586817790410" duration="6326000" />
+      <workItem from="1588166610678" duration="4394000" />
+      <workItem from="1588593868293" duration="3519000" />
+      <workItem from="1588603180545" duration="264000" />
+      <workItem from="1588616307033" duration="80000" />
+      <workItem from="1588682033563" duration="67000" />
+      <workItem from="1588682158271" duration="5762000" />
+      <workItem from="1588688016306" duration="4527000" />
+      <workItem from="1588784320759" duration="90000" />
+      <workItem from="1588784430858" duration="24000" />
+      <workItem from="1588784474283" duration="139000" />
+      <workItem from="1588785036861" duration="641000" />
+      <workItem from="1588785805133" duration="4388000" />
+      <workItem from="1588790981190" duration="123000" />
+      <workItem from="1588791293645" duration="376000" />
+      <workItem from="1588791721786" duration="326000" />
+      <workItem from="1588865051175" duration="5000" />
+      <workItem from="1588865085938" duration="225000" />
+      <workItem from="1588866887958" duration="605000" />
+      <workItem from="1589110303810" duration="36000" />
+      <workItem from="1589144965562" duration="7000" />
+      <workItem from="1589144997631" duration="5378000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1586817721967">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589144972052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586817721967" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589144972052" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1586706309314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -97,5 +117,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586706309314" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589146015574">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589146015574" />
   </component>
 </project>

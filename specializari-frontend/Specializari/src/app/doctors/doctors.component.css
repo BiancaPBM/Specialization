@@ -41,4 +41,13 @@ mat-card {
     border-radius: 20px;
     background-color: #3f51b5;
     color: white;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+
+}
+
+mat-card-title-group{
+
+    font-size: x-large;
 }

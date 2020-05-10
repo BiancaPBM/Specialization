@@ -1,26 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import {DoctorService} from './doctor.service'
-
+import {DoctorService} from './doctor.service';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {Observable} from 'rxjs';
+import {switchMap} from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+const baseUrl = 'http://localhost:8090/doctors';
 @Component({
   selector: 'app-doctors',
   templateUrl: 'doctors.component.html',
   styleUrls: ['./doctors.component.css']
 })
 export class DoctorsComponent implements OnInit {
-
   doctors: any;
   currentDoctor = null;
   currentIndex = -1;
+  currentIdDoc = -1;
   name = '';
-  specialitate= '';
+  specialitate = '';
   locatie = '';
   filterList = '';
   sortare = '';
   sortDirectie = '';
 
-  constructor(private doctorService: DoctorService) { }
+  constructor(private doctorService: DoctorService, private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.retrieveDoctors();
@@ -42,18 +47,24 @@ export class DoctorsComponent implements OnInit {
   setActiveDoctor(doctor, index) {
     this.currentDoctor = doctor;
     this.currentIndex = index;
+    this.currentIdDoc = doctor._id;
+  }
+  refreshList() {
+    this.retrieveDoctors();
+    this.currentDoctor = null;
+    this.currentIndex = -1;
   }
 
   filterDoctors(){
-    if(this.sortare =='Nume ( A - Z )'){
+    if(this.sortare == 'Nume ( A - Z )'){
       this.sortare = 'name';
       this.sortDirectie = 'Asc';
     }
-    if(this.sortare =='Nume ( Z - A )'){
+    if(this.sortare == 'Nume ( Z - A )'){
       this.sortare = 'name';
       this.sortDirectie = 'Desc'
     }
-    if(this.sortare =='Rating crescator'){
+    if(this.sortare == 'Rating crescator'){
       this.sortare = 'rating';
       this.sortDirectie = 'Asc';
     }
@@ -75,6 +86,15 @@ export class DoctorsComponent implements OnInit {
         });
   }
 
-  
-
+  removeAllDoctors() {
+    this.doctorService.deleteAll()
+        .subscribe(
+            response => {
+              console.log(response);
+              this.retrieveDoctors();
+            },
+            error => {
+              console.log(error);
+            });
+  }
 }
